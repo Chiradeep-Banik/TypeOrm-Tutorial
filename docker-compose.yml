@@ -1,13 +1,13 @@
 services:
   server:
-    image: user1313/dev_env:latest
+    image: user1313/dev_env:slim
     volumes:
       - .:/app
     ports:
-      - "8080:8080"
       - "1313:1313"
-      - "3000:3000"
-    command: /bin/sh -c "while sleep 500; do :; done"
+    command: /bin/sh -c "while true; do sleep 1; done"
+    depends_on:
+      - db-postgres
   db-postgres:
     image: postgres
     environment:

@@ -29,7 +29,7 @@ const main = async () => {
         app.use(createTransactionRouter);
 
         app.listen(1313, () => {
-            console.log('Listening on port 1313');
+            console.log('Listening on port 1313!!');
         });
     } catch (err) {
         console.error('Connection unsucessfull 👎👎👎\n', err);
